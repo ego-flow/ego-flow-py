@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible EgoFlow Python Client problem.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include tokens, private endpoints, repository names, recordings, datasets, or personal data. Use the private security form for vulnerabilities.
+  - type: input
+    id: version
+    attributes:
+      label: ego-flow version
+      placeholder: 0.0.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Python, operating system, and server versions
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and redacted traceback
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Data safety
+      options:
+        - label: I removed tokens, private URLs, repository names, recordings, datasets, and personal data.
+          required: true

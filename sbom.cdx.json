@@ -1,0 +1,202 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1686ca5f-a5cc-5997-9d2d-0d73fc881059",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-18T07:49:43.680978Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "EgoFlow",
+          "name": "ego-flow-py-sbom-generator",
+          "version": "1"
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "bom-ref": "pkg:pypi/ego-flow@0.0.1",
+      "supplier": {
+        "name": "EgoFlow"
+      },
+      "name": "ego-flow",
+      "version": "0.0.1",
+      "description": "Python dataset and live-stream client for EgoFlow servers.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/ego-flow@0.0.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pypi.org/project/ego-flow/0.0.1/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/ego-flow/ego-flow-py"
+        },
+        {
+          "type": "distribution",
+          "url": "https://files.pythonhosted.org/packages/ed/35/d5fadbb4569f03003f0dedfeff5666bab61885237d38cc1a1980c534e1f0/ego_flow-0.0.1-py3-none-any.whl",
+          "comment": "ego_flow-0.0.1-py3-none-any.whl",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "32972180747908a54e9088569f62d5ea188a5f4d5274c7e51aae8092fd94ca10"
+            }
+          ]
+        },
+        {
+          "type": "distribution",
+          "url": "https://files.pythonhosted.org/packages/aa/fc/4a3672b46e6ea5158fc49c7640335b2295e4bdaf71065c71d6c42002b1fa/ego_flow-0.0.1.tar.gz",
+          "comment": "ego_flow-0.0.1.tar.gz",
+          "hashes": [
+            {
+              "alg": "SHA-256",
+              "content": "68e8e4d5f7f90baeaff11a4c1135cdef6ba3ac85d807fd8ea353705f84fad392"
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "io.egoflow.python.dependency-model",
+          "value": "published-direct-runtime-requirements"
+        },
+        {
+          "name": "io.egoflow.python.requires-python",
+          "value": ">=3.9"
+        },
+        {
+          "name": "io.egoflow.sbom.reproducible-timestamp-source",
+          "value": "latest-pypi-artifact-upload"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "dependency:av>=12.0",
+      "name": "av",
+      "scope": "required",
+      "purl": "pkg:pypi/av",
+      "properties": [
+        {
+          "name": "io.egoflow.python.requirement",
+          "value": "av>=12.0"
+        },
+        {
+          "name": "io.egoflow.python.version-range",
+          "value": ">=12.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "dependency:datasets>=2.19",
+      "name": "datasets",
+      "scope": "required",
+      "purl": "pkg:pypi/datasets",
+      "properties": [
+        {
+          "name": "io.egoflow.python.requirement",
+          "value": "datasets>=2.19"
+        },
+        {
+          "name": "io.egoflow.python.version-range",
+          "value": ">=2.19"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "dependency:numpy>=1.23",
+      "name": "numpy",
+      "scope": "required",
+      "purl": "pkg:pypi/numpy",
+      "properties": [
+        {
+          "name": "io.egoflow.python.requirement",
+          "value": "numpy>=1.23"
+        },
+        {
+          "name": "io.egoflow.python.version-range",
+          "value": ">=1.23"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "dependency:platformdirs>=4.0",
+      "name": "platformdirs",
+      "scope": "required",
+      "purl": "pkg:pypi/platformdirs",
+      "properties": [
+        {
+          "name": "io.egoflow.python.requirement",
+          "value": "platformdirs>=4.0"
+        },
+        {
+          "name": "io.egoflow.python.version-range",
+          "value": ">=4.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "dependency:torch>=2.0",
+      "name": "torch",
+      "scope": "required",
+      "purl": "pkg:pypi/torch",
+      "properties": [
+        {
+          "name": "io.egoflow.python.requirement",
+          "value": "torch>=2.0"
+        },
+        {
+          "name": "io.egoflow.python.version-range",
+          "value": ">=2.0"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/ego-flow@0.0.1",
+      "dependsOn": [
+        "dependency:av>=12.0",
+        "dependency:datasets>=2.19",
+        "dependency:numpy>=1.23",
+        "dependency:platformdirs>=4.0",
+        "dependency:torch>=2.0"
+      ]
+    },
+    {
+      "ref": "dependency:av>=12.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "dependency:datasets>=2.19",
+      "dependsOn": []
+    },
+    {
+      "ref": "dependency:numpy>=1.23",
+      "dependsOn": []
+    },
+    {
+      "ref": "dependency:platformdirs>=4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "dependency:torch>=2.0",
+      "dependsOn": []
+    }
+  ]
+}
